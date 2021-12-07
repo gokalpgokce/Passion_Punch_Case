@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -7,15 +5,15 @@ public class Player : MonoBehaviour
 {
     public GameObject bullet;
     public GameObject firePoint;
-    private float bulletSpeed = 1000f;
     public CharacterController controller;
+    public TextMeshProUGUI totalCountText;
+    private float bulletSpeed = 1000f;
     private float playerSpeed = 10f;
     private float totalBulletCount;
-    public TextMeshProUGUI totalCountText;
+    
     
     void Update()
     {
-        
         Move();
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
